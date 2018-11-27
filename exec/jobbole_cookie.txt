@@ -1,0 +1,10 @@
+# Netscape HTTP Cookie File
+# http://curl.haxx.se/rfc/cookie_spec.html
+# This is a generated file!  Do not edit.
+
+.jobbole.com	TRUE	/	FALSE	1545421334	wordpress_logged_in_0efdf49af511fd88681529ef8c2e5fbf	augsnano%7C1545378134%7CiwjF31fOChDxYkukGLrTFPMCZAoHkX2P4WKjoCjzVUJ%7Ccedbb9284442b455fd4071859e2ea3b86c0a2b481b51b1b7364f472a5d971bbb
+.jobbole.com	TRUE	/	FALSE		wordpress_test_cookie	WP+Cookie+check
+.jobbole.com	TRUE	/wp-admin	FALSE	1545421334	wordpress_0efdf49af511fd88681529ef8c2e5fbf	augsnano%7C1545378134%7CiwjF31fOChDxYkukGLrTFPMCZAoHkX2P4WKjoCjzVUJ%7C7a4f174951eb8f5a6077f73d9421a2a18924a00be89c8bc1c860e53b106db68e
+.jobbole.com	TRUE	/wp-content/plugins	FALSE	1545421334	wordpress_0efdf49af511fd88681529ef8c2e5fbf	augsnano%7C1545378134%7CiwjF31fOChDxYkukGLrTFPMCZAoHkX2P4WKjoCjzVUJ%7C7a4f174951eb8f5a6077f73d9421a2a18924a00be89c8bc1c860e53b106db68e
+date.jobbole.com	FALSE	/	FALSE	1574322135	wp-settings-349172	mfold%3Do
+date.jobbole.com	FALSE	/	FALSE	1574322135	wp-settings-time-349172	1542786135

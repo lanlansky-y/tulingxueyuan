@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<bookstore>
+    <book category="cooking">
+        <title lang="en">Hello World</title>
+        <author>Yyz</author>
+        <year>2018</year>
+        <price>48</price>
+    </book>
+    <book category="education">
+        <title lang="en">Python is Python</title>
+        <author>Yyz</author>
+        <year>2018</year>
+        <price>88</price>
+    </book>
+    <book category="sport">
+        <title lang="en">Running</title>
+        <author>Yyz</author>
+        <year>2018</year>
+        <price>30</price>
+    </book>
+</bookstore>

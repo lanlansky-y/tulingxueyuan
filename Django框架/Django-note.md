@@ -189,4 +189,75 @@
                 格里进行定义
             Add:
                 - 跟一对一方法类似，通过create和new来添加
-        N:N：ManyToMany    
+                - create:把属性都填满，不需要手动保存
+                    t = Teacher.objects.create(teacher_name="刘二拿", my_school=ss[0])
+                - new:属性或者参数可以为空，但必须使用save保存
+            Query:
+                        
+        N:N：ManyToMany 
+            - 表示任意一个表的数据可以拥有对方表格
+            多项数据，反之亦然
+            - 比如：典型的例子就是老师和学生的关系
+            - 使用上，在任意一方，使用ManyToMany定义，
+            只需要定义一边
+            - Add:
+                - 添加老师：student.teachers.add()
+            - query:
+                - 跟一对多类似，使用_set查询        
+##模板系统                
+    - 模板：一组相同或者相似的页面，在需要个性化的地方
+    进行留白，需要的时候只是用数据填充就可以使用了
+    - 步骤：
+        1.在settings中进行设置：TEMPLATES
+            在settings中的TEMPLATES中的DIRS中添加:
+            os.path.join(BASE_DIR, 'templates')
+            #上面的意思是告诉django,在当前项目目录下查
+            找叫templates的文件夹，下面都是我的模板
+        2.在templates文件夹下编写模板并调用
+    - 模板中的变量
+        - 变量的表示方法：{{name}}    
+        - 在系统调用模板的时候，会用相应的数据查找相应的
+        变量名称，如果能找到，则填充或者叫渲染，否则跳过
+    - 模板中的标签
+        - for标签：{% for .. in .. %} 
+        - 用法：
+            {% for .. in .. %}  
+                循环语句
+            {% endfor %} 
+        - 案例：three,显示班级成绩
+        - if标签
+        - 用来判断条件  
+        - 代码示例：
+            {% if 条件 %}
+                条件成立执行语句
+            {% elif 条件 %}
+                条件成立执行语句
+            {% else %}
+                以上条件都不成立执行语句
+            {% endif %}   
+        案例：four  
+        
+#Session
+    - 为了应对HTTP协议的无状态性
+    - 用来保存用户比较敏感的信息
+    - 属于request的一个属性
+    - 常用操作：
+        - request.session.get(key, defaultValue)
+        - request.session.clear():清楚session中的全部值
+        - request.session[key] = value:赋值
+        - request.session.flush():删除当前会话且清楚会话的cookie
+        - del request.session[key]
+        
+#分页
+    - django提供现成的分页器用来对结果进行分页
+    - from django.core.paginator import Paginator
+
+#基于类的视图
+    - 可以针对http协议不同的方法创建不同的函数
+    - 可以使用Mixin等opp技术
+    - Mixin
+        - 把来自父类的行为或者属性组合在一起
+        - 解决多重继承的问题    
+    - ListView
+     
+#admin  

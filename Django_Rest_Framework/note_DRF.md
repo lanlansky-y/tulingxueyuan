@@ -17,3 +17,12 @@
     - 安装：pip install djangorestframework
     - 版本问题：version3.7是基于1.xx版本的django，之后是基于2.xx版本的django
     - django_filter依赖djangorestframework 3.7
+##DRF的主要任务    
+    - 案例：TlxyDRF
+        - django-admin startproject TlxyDRF
+        - python manage.py startapp case01
+        - 配置settings(app)
+        - 配置urls
+        - 创建三个模型：Student, Teacher, Classroom
+        - 创建序列化器
+        - 创建视图聚合

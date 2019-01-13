@@ -1,5 +1,5 @@
 #Django Rest Framework(DRF)
-##1.Rest
+##Rest
     - 前后端分离
     - API:Application Programming Interface
         - 为了应付千变万化的前端需求
@@ -50,4 +50,39 @@
                 - 如果验证失败，返回数据错误异常
             - validated_data:
                 - 经过验证后的数据，存入此结构
-                    
+    - 视图
+        - DRF的视图从处理任务到处理流程等跟Django基本一致
+        - 此视图基本是django视图的扩展   
+        - Request
+            - 把请求解析成一个request实例
+            - 属于DRF的， 跟django的HttpRequest不太一样
+            - 在得到Request之前有一个Parse对传入的数据请求进行解析
+            - data属性
+                - 请求数据体，类似于Django的request.POST, request.FILES
+                - 在DRF中主要指的是Json
+            - query_params
+                - 所有传入的关键字 
+    - Response
+        - rest_framework.response.Response
+        - 用renderer渲染器对返回内容进行渲染
+    - 返回的构造方式
+        return Response(data, status=None, template_name=None, headers=None, content_type=None)
+        data:返回的数据
+        status:返回的状态码
+            1xx:信息告知
+            2xx:成功
+            3xx:重定向
+            4xx:请求错误
+            5xx:服务器错误   
+    - 视图类
+        APIView
+            - rest_framework.views.APIView
+            - 是django中view的子类
+            - 跟View有不同的地方
+                - 传入传出数据用的是drf的请求和反馈类
+                - 会引发并处理APIException
+                - 在dispatch之前，会进行身份验证，权限检查，流量控制
+            - 支持的属性有
+                - authentication_classes:列表或者元祖，身份验证类
+                - permisson_classes:进行权限验证
+                - throttle_classes:流量控制

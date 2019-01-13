@@ -26,3 +26,28 @@
         - 创建三个模型：Student, Teacher, Classroom
         - 创建序列化器
         - 创建视图聚合
+##序列化
+    - 序列化：把系统运行中的一些实例等转换成一种可直接表示出来的格式，用来保存、传输等
+    - 反序列化：序列化的反操作   
+    练习2：
+    创建项目 DRF2
+    创建app MySer
+    配置settings
+##serializer的类型的参数
+    - read_only:仅用于序列化输出
+    - write_only:仅用于反序列化输入
+    - required:反序列化时必须输入，默认是True
+    - allow_null:允许传入None
+    - validators:使用验证器
+##创建serializer对象和使用
+    - 构造方法
+        Serializer(instance=None, data=empty, **kwarg)
+    - 反序列化        
+        - 验证
+            - is_valid:
+                - 验证数据是否合法，返回boolean
+                - 在使用从外部传入的数据之前，必须使用此函数进行验证
+                - 如果验证失败，返回数据错误异常
+            - validated_data:
+                - 经过验证后的数据，存入此结构
+                    

@@ -86,3 +86,24 @@
                 - authentication_classes:列表或者元祖，身份验证类
                 - permisson_classes:进行权限验证
                 - throttle_classes:流量控制
+            - 对API的访问提供了一些方便
+                - HTTP-Method + 名词
+                - 默认对HttpMethod常用方法提供了支持
+            - 案例：views - StudentAPIView
+        - API调试工具
+            - chrome - postman
+            - firefox - RESTClient
+        - GenericAPIView
+            - APIView的子类
+            - 支持的属性
+                - queryset:查询结果集
+                - serializer_class:视图使用的序列化器
+                - panination_class:分页控制器
+                - filter_backends:过滤器后端
+                - lookup_filed:查询条件字段，默认为pk
+            - 方法：
+                - get_queryset:返回查询结果集，经常需要重写
+                - get_serializer_class:得到序列化器类
+                - get_serializer:得到序列化器
+            案例：
+    

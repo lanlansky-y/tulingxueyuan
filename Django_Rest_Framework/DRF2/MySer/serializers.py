@@ -3,7 +3,7 @@ from MySer.models import *
 
 #此文件用来存放序列化器
 
-class StudentSerializer(serializers.Serializer):
+class StudentSerializer(serializers.ModelSerializer):
     '''
     下面写的是每一个需要序列化/反序列化的字段
     跟定义模型基本一致

@@ -105,5 +105,22 @@
                 - get_queryset:返回查询结果集，经常需要重写
                 - get_serializer_class:得到序列化器类
                 - get_serializer:得到序列化器
-            案例：
+            案例：views - StudentGenAPIView
     
+    - ListModelMixin
+        - list(request, *args, **kwargs)
+    - CreatModelMixin
+        - creat(request, *args, **kwargs)
+    - RetrieveModelMixin
+        - retrieve(request, *args, **kwargs)
+    - UpdateModelMixin
+        - update(request, *args, **kwargs)
+    - DestroyModelMixin
+        - destroy(request, *args, **kwargs)
+##ViewSet(视图集)
+    - 把一系列操作打包放入一个类中
+    - list:GET
+    - retrieve:GET + id
+    - destroy:DELETE
+    - update:UPDATE
+    - create:POST 
